@@ -36,7 +36,7 @@ this.player.style.top = currentYval + -1 + "px";
     },15)
 
     console.log(movement);
-
+    
 this.player.src = 'assets/character/walkup.gif';
 }
  walkSouth() {

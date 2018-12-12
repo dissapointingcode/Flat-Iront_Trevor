@@ -21,6 +21,10 @@
         if (checkCollision(playerdim,aBoxdim)) {
         let currentXval = parseInt (this.player.style.left);
         this.player.style.left = currentXval + -1 + "px";
+    } else if(dirCol != "just moved left")
+    {
+        let currentXval = parseInt (this.player.style.left);
+        this.player.style.left = currentXval + -1 + "px";
     }
     },15)
 
@@ -34,6 +38,10 @@ this.player.src = 'assets/character/walkleft.gif';
         if (checkCollision(playerdim,aBoxdim)) { 
     let currentYval = parseInt (this.player.style.top);
 this.player.style.top = currentYval + -1 + "px";
+}
+else if (dirCol != "just moved up") { 
+    let currentYval = parseInt (this.player.style.top);
+this.player.style.top = currentYval + -1 + "px";
 }    
 },15)
 
@@ -44,11 +52,17 @@ this.player.src = 'assets/character/walkup.gif';
  walkSouth() {
     stop()
     movement = setInterval(()=> {
-        if (checkCollision(playerdim,aBoxdim)) {{
+        if (checkCollision(playerdim,aBoxdim)) {
     let currentYval = parseInt (this.player.style.top);
-this.player.style.top = currentYval + 1 + "px";
-}    
+    this.player.style.top = currentYval + 1 + "px";
+}else if(dirCol  != "just moved down") 
+{
+    let currentYval = parseInt (this.player.style.top);
+    this.player.style.top = currentYval + 1 + "px";
 }
+    
+   
+
     },15)
 
     console.log(movement);
@@ -58,12 +72,17 @@ this.player.style.top = currentYval + 1 + "px";
     stop()
 
     movement = setInterval(()=>{
-        if (checkCollision(playerdim,aBoxdim)) {
+        if (checkCollision(playerdim,aBoxdim))
+         {
         
         let currentXval = parseInt(this.player.style.left)
-
-    this.player.style.left = currentXval + 1 + 'px'
-        }
+        this.player.style.left = currentXval + 1 + 'px'
+        } else if(dirCol != "just moved right")
+        {
+        
+            let currentXval = parseInt(this.player.style.left)
+            this.player.style.left = currentXval + 1 + 'px'
+            }
     }, 15)
 
      console.log(movement)

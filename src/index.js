@@ -48,9 +48,9 @@ function checkCollision (dim1,dim2) {
         dim1.y < dim2.y + dim2.h &&
         dim1.h + dim1.y > dim2.y) {
         // collision detected!
-       stop()
+       return  false;
     } else {
         // no collision
-        console.log("nah");
+        return true;
     }
 };

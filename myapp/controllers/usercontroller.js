@@ -1,4 +1,4 @@
-const user = require('.../models/user.js');
+const user = require('.../models/user');
 exports.readAll = (req, res, next) => {
     user.find((err, res, next) =>{
         if(err) {

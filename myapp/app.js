@@ -1,6 +1,9 @@
 const express = require('express');
 const http = require('http');
 const mongoose = require('mongoose');
+const userdata = require('.../models/user')
+const user = require('.../controllers/usercontroller')
+const userroute = require('.../router/routes')
 
 const app = express();
 
